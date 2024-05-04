@@ -66,7 +66,7 @@ app.get('/customers/:customerName/bookings', (req, res) => {
   const customerBookings = bookings.filter(booking => booking.customerName === customerName);
   res.json(customerBookings);
 });
-
+app.get('/',(req,res)=>{ res.send('App is running')})
 // Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
